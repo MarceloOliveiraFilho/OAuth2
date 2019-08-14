@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <title>OAuth2 </title>
+  <link rel="stylesheet" type="text/css" href="../static/css/style.css" th:href="@{css/style.css}"/>
+</head>
+<body>
+<!-- Sign In With Intuit Button -->
+  <b>RDStation</b><br />
+  <a class="imgLink" th:onclick="'launchPopup(\'signInWithIntuit\');'" href="#">
+    button
+  </a>
+  <br /><br /><br />
+
+
+  <script>
+  function launchPopup(path) {
+    var win;
+    var checkConnect;
+    var parameters = "location=1,width=1000,height=650";
+    parameters += ",left=" + (screen.width - 800) / 2 + ",top=" + (screen.height - 650) / 2;
+    // Launch Popup
+    win = window.open(path, 'connectPopup', parameters);
+  }
+</script>
+
+</body>
+</html>
